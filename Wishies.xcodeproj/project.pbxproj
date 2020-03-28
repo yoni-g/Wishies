@@ -99,10 +99,10 @@
 		F0E24EF82424F23400541BCE /* Wishies */ = {
 			isa = PBXGroup;
 			children = (
+				F0F3C441242FD1D900028986 /* Screens */,
+				F0F3C440242FD1BD00028986 /* Storyboards */,
 				F0E24EF92424F23400541BCE /* AppDelegate.swift */,
 				F0E24EFB2424F23400541BCE /* SceneDelegate.swift */,
-				F0E24EFD2424F23400541BCE /* ViewController.swift */,
-				F0E24EFF2424F23400541BCE /* Main.storyboard */,
 				F0E24F022424F23500541BCE /* Assets.xcassets */,
 				F0E24F042424F23500541BCE /* LaunchScreen.storyboard */,
 				F0E24F072424F23500541BCE /* Info.plist */,
@@ -126,6 +126,22 @@
 				F0E24F1D2424F23500541BCE /* Info.plist */,
 			);
 			path = WishiesUITests;
+			sourceTree = "<group>";
+		};
+		F0F3C440242FD1BD00028986 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F0E24EFF2424F23400541BCE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F0F3C441242FD1D900028986 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F0E24EFD2424F23400541BCE /* ViewController.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
