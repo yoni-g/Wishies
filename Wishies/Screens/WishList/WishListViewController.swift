@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WishListViewController.swift
 //  Wishies
 //
 //  Created by Yonathan Goriachnick on 20/03/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WishListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

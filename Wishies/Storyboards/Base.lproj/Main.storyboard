@@ -10,15 +10,52 @@
         <!--Wishies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WishListViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ePI-Xp-xWr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="KGy-xo-fd8" detailTextLabel="PhG-27-r2S" style="IBUITableViewCellStyleSubtitle" id="kVD-4O-d4j">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kVD-4O-d4j" id="4OM-0v-5In">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KGy-xo-fd8">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PhG-27-r2S">
+                                                    <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ePI-Xp-xWr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7S5-Ru-mqg"/>
+                            <constraint firstItem="ePI-Xp-xWr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AcS-4Z-obM"/>
+                            <constraint firstItem="ePI-Xp-xWr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oif-50-FDQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ePI-Xp-xWr" secondAttribute="bottom" id="yNz-G4-ekB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Wishies" id="s48-CC-JjI">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="OWN-vL-F0k"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ond-2u-dfQ">
                             <connections>
                                 <segue destination="DAb-Pb-maY" kind="show" id="E6e-NN-kt8"/>
@@ -28,19 +65,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="138"/>
+            <point key="canvasLocation" x="971.01449275362324" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Wish View Controller-->
         <scene sceneID="JUl-6D-3GZ">
             <objects>
-                <viewController id="DAb-Pb-maY" sceneMemberID="viewController">
+                <viewController id="DAb-Pb-maY" customClass="WishViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIP-Zs-xgo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB7-7J-9wT">
+                                <rect key="frame" x="20" y="104" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nIV-yE-rvg">
+                                <rect key="frame" x="20" y="143" width="374" height="420"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZM3-gE-3ty">
+                                <rect key="frame" x="184" y="832" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZM3-gE-3ty" firstAttribute="top" secondItem="nIV-yE-rvg" secondAttribute="bottom" constant="269" id="0Op-iR-WwG"/>
+                            <constraint firstItem="nIV-yE-rvg" firstAttribute="leading" secondItem="uaa-tk-SsU" secondAttribute="leading" constant="20" id="604-Nn-jcP"/>
+                            <constraint firstItem="nIV-yE-rvg" firstAttribute="top" secondItem="gB7-7J-9wT" secondAttribute="bottom" constant="18.5" id="Amo-RL-hvC"/>
+                            <constraint firstItem="ZM3-gE-3ty" firstAttribute="leading" secondItem="uaa-tk-SsU" secondAttribute="leading" constant="184" id="FMr-XN-4fD"/>
+                            <constraint firstItem="gB7-7J-9wT" firstAttribute="leading" secondItem="uaa-tk-SsU" secondAttribute="leading" constant="20" id="Hgf-AO-LD4"/>
+                            <constraint firstItem="ZM3-gE-3ty" firstAttribute="bottom" secondItem="uaa-tk-SsU" secondAttribute="bottom" id="JeW-nt-A9Y"/>
+                            <constraint firstItem="uaa-tk-SsU" firstAttribute="trailing" secondItem="gB7-7J-9wT" secondAttribute="trailing" constant="20" id="aIg-1W-EhA"/>
+                            <constraint firstItem="uaa-tk-SsU" firstAttribute="trailing" secondItem="nIV-yE-rvg" secondAttribute="trailing" constant="20" id="qC8-Sz-AFi"/>
+                            <constraint firstItem="uaa-tk-SsU" firstAttribute="trailing" secondItem="ZM3-gE-3ty" secondAttribute="trailing" constant="184" id="t9r-18-wdk"/>
+                            <constraint firstItem="gB7-7J-9wT" firstAttribute="top" secondItem="uaa-tk-SsU" secondAttribute="top" constant="16" id="uhv-Sc-Xwe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uaa-tk-SsU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gff-Jm-zAC"/>
+                    <navigationItem key="navigationItem" id="gff-Jm-zAC">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" systemItem="edit" id="egz-PA-3SD"/>
+                            <barButtonItem systemItem="action" id="OWN-vL-F0k"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rI-ba-Yq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
