@@ -9,5 +9,9 @@
 import Foundation
 
 struct Wish {
-    
+    var title: String
+    var wishBody: String
+    var createdDate: Date
+    var id: String
+//    var title: String
 }

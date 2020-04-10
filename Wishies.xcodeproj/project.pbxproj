@@ -19,6 +19,7 @@
 		F0F3C448242FE0D400028986 /* WishViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F3C447242FE0D400028986 /* WishViewModal.swift */; };
 		F0F3C44B242FE14400028986 /* WishListViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F3C44A242FE14400028986 /* WishListViewModal.swift */; };
 		F0F3C44D242FE1A800028986 /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F3C44C242FE1A800028986 /* Wish.swift */; };
+		F0F3C44F2440831700028986 /* WishesDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F3C44E2440831700028986 /* WishesDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F0F3C447242FE0D400028986 /* WishViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishViewModal.swift; sourceTree = "<group>"; };
 		F0F3C44A242FE14400028986 /* WishListViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModal.swift; sourceTree = "<group>"; };
 		F0F3C44C242FE1A800028986 /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
+		F0F3C44E2440831700028986 /* WishesDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishesDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F3C44C242FE1A800028986 /* Wish.swift */,
+				F0F3C44E2440831700028986 /* WishesDataStack.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				F0E24EFE2424F23400541BCE /* WishListViewController.swift in Sources */,
 				F0F3C444242FE05800028986 /* WishViewController.swift in Sources */,
 				F0F3C448242FE0D400028986 /* WishViewModal.swift in Sources */,
+				F0F3C44F2440831700028986 /* WishesDataStack.swift in Sources */,
 				F0E24EFA2424F23400541BCE /* AppDelegate.swift in Sources */,
 				F0F3C44D242FE1A800028986 /* Wish.swift in Sources */,
 				F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */,
