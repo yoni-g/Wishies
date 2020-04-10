@@ -14,7 +14,7 @@ class WishesDataStack {
     
     typealias OperationResult = (success: Bool, reason: String?)
     
-    let shared = WishesDataStack()
+    static let shared = WishesDataStack()
     private init(){}
     
     private var wishes = [Wish]()

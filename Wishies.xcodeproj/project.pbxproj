@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F061AE17244090DE0035EE1C /* WishListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */; };
 		F0E24EFA2424F23400541BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EF92424F23400541BCE /* AppDelegate.swift */; };
 		F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EFB2424F23400541BCE /* SceneDelegate.swift */; };
 		F0E24EFE2424F23400541BCE /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EFD2424F23400541BCE /* WishListViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewDataSource.swift; sourceTree = "<group>"; };
 		F0E24EF62424F23400541BCE /* Wishies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wishies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E24EF92424F23400541BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E24EFB2424F23400541BCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				F0E24EFD2424F23400541BCE /* WishListViewController.swift */,
 				F0F3C44A242FE14400028986 /* WishListViewModal.swift */,
+				F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */,
 			);
 			path = WishList;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				F0F3C448242FE0D400028986 /* WishViewModal.swift in Sources */,
 				F0F3C44F2440831700028986 /* WishesDataStack.swift in Sources */,
 				F0E24EFA2424F23400541BCE /* AppDelegate.swift in Sources */,
+				F061AE17244090DE0035EE1C /* WishListTableViewDataSource.swift in Sources */,
 				F0F3C44D242FE1A800028986 /* Wish.swift in Sources */,
 				F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */,
 				F0F3C44B242FE14400028986 /* WishListViewModal.swift in Sources */,

@@ -11,7 +11,12 @@ import Foundation
 struct Wish {
     var title: String
     var wishBody: String
-    var createdDate: Date
-    var id: String
+    var createdDate: Date?
+    var id: String?
+    
+    init(title: String, body: String) {
+        self.title = title
+        self.wishBody = body
+    }
 //    var title: String
 }
