@@ -12,8 +12,11 @@ class WishListTableView: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     var wishes: [Wish]!
     
+    var navigateToWish: ((_ wishId: String)->())?
+    
     init(wishes: [Wish]) {
         self.wishes = wishes
+//        navigateToWish = nil
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,24 +33,26 @@ class WishListTableView: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(wishes[indexPath.row])
+        if let id = wishes[indexPath.row].id{
+            navigateToWish?(id)
+        }
     }
     
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        let delAction = UIContextualAction(style: .destructive, title: "Delete") {_,_,complete in
-            print("delete")
-            complete(true)
-        }
-        
-        let shareAction = UIContextualAction(style: .normal, title: "") {_,_,complete in
-            print("share")
-            complete(true)
-            
-        }
-        shareAction.image = UIImage(systemName: "square.and.arrow.up")
-
-        return UISwipeActionsConfiguration(actions: [delAction, shareAction])
-    }
+//    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//
+//        let delAction = UIContextualAction(style: .destructive, title: "Delete") {_,_,complete in
+//            print("delete")
+//            complete(true)
+//        }
+//
+//        let shareAction = UIContextualAction(style: .normal, title: "") {_,_,complete in
+//            print("share")
+//            complete(true)
+//
+//        }
+//        shareAction.image = UIImage(systemName: "square.and.arrow.up")
+//
+//        return UISwipeActionsConfiguration(actions: [delAction, shareAction])
+//    }
     
 }

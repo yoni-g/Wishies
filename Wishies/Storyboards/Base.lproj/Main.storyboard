@@ -73,7 +73,7 @@
         <!--Wish View Controller-->
         <scene sceneID="JUl-6D-3GZ">
             <objects>
-                <viewController id="DAb-Pb-maY" customClass="WishViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WishViewController" id="DAb-Pb-maY" customClass="WishViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIP-Zs-xgo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

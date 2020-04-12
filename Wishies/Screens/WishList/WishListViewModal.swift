@@ -7,18 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 class WishListViewModal{
     
     var wishes: [Wish]!
+    var emptyTableView: UIView!
     
-    init() {
-        var wish1 = Wish(title: "first wish", body: "become rich!!")
-        
-        WishesDataStack.shared.insert(wish: &wish1)
-        WishesDataStack.shared.insert(wish: &wish1)
-        WishesDataStack.shared.insert(wish: &wish1)
+    init(){
         
         wishes = WishesDataStack.shared.getAllWishes()
+//        emptyTableView = ViewUtils.createEmptyTableView()
     }
+    
 }

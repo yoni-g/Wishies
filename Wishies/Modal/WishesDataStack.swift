@@ -15,6 +15,7 @@ class WishesDataStack {
     typealias OperationResult = (success: Bool, reason: String?)
     
     static let shared = WishesDataStack()
+    
     private init(){}
     
     private var wishes = [Wish]()
@@ -57,7 +58,7 @@ class WishesDataStack {
     }
     
     private func generateId()->String{
-        return String(Date.timeIntervalBetween1970AndReferenceDate)
+        return String(Date.timeIntervalSinceReferenceDate * 100000)
     }
 //    func
     

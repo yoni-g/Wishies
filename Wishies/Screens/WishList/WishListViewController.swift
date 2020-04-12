@@ -13,17 +13,24 @@ class WishListViewController: UIViewController {
     var viewModal: WishListViewModal!
     @IBOutlet var tableView: UITableView!
     var tableViewDelegate: WishListTableView!
-//    var tableView: UITableView!
     
     override func viewDidLoad() {
+        
         viewModal = WishListViewModal()
+        
         tableViewDelegate = WishListTableView(wishes: viewModal.wishes)
         tableView.delegate = tableViewDelegate
         tableView.dataSource = tableViewDelegate
+        tableViewDelegate.navigateToWish = displayWishView
         
         super.viewDidLoad()
+    }
+    
+    func displayWishView(with wishId: String){
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let wishVC = storyboard.instantiateViewController(identifier: "WishViewController")
         
-        // Do any additional setup after loading the view.
+        self.navigationController?.pushViewController(wishVC, animated: true)
     }
     
 
