@@ -9,8 +9,8 @@
 import Foundation
 
 struct Wish {
-    var title: String
-    var wishBody: String
+    var title: String?
+    var wishBody: String?
     var createdDate: Date?
     var id: String?
     
@@ -18,5 +18,7 @@ struct Wish {
         self.title = title
         self.wishBody = body
     }
+    
+    init() {}
 //    var title: String
 }

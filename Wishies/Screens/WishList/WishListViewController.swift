@@ -15,15 +15,22 @@ class WishListViewController: UIViewController {
     var tableViewDelegate: WishListTableView!
     
     override func viewDidLoad() {
-        
+        initViewCtrl()
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        initViewCtrl()
+        super.viewDidAppear(animated)
+    }
+    
+    func initViewCtrl(){
         viewModal = WishListViewModal()
         
         tableViewDelegate = WishListTableView(wishes: viewModal.wishes)
         tableView.delegate = tableViewDelegate
         tableView.dataSource = tableViewDelegate
         tableViewDelegate.navigateToWish = displayWishView
-        
-        super.viewDidLoad()
     }
     
     func displayWishView(with wishId: String){

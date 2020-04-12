@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
+typealias OperationResult = (success: Bool, reason: String?)
 
 class WishesDataStack {
     
-    typealias OperationResult = (success: Bool, reason: String?)
+    
     
     static let shared = WishesDataStack()
     
@@ -48,7 +49,7 @@ class WishesDataStack {
         return (true, nil)
     }
     
-    func update(updateWish: inout Wish, withId id: String)->OperationResult{
+    func update(updateWish: Wish, withId id: String)->OperationResult{
         if var wish = getWish(by: id){
             wish.title = updateWish.title
             wish.wishBody = updateWish.wishBody

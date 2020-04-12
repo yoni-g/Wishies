@@ -13,7 +13,7 @@ enum WishViewMode {
     case new
 }
 
-class WishViewModal{
+class WishViewModal: NSObject{
     
     var wish: Wish?
     var viewMode: WishViewMode!
@@ -26,6 +26,10 @@ class WishViewModal{
         return wish?.wishBody
     }
     
+    var isWishFieldValid: Bool {
+        return (wish?.title != nil && wish?.wishBody != nil)
+    }
+    
     var titlePlaceholder = "Enter wish title.."
 //    var bodyPlaceholder = "So.. What is your wish? 🤔"
     
@@ -35,7 +39,41 @@ class WishViewModal{
             viewMode = .edit
         } else {
             viewMode = .new
+            wish = Wish()
         }
         
+    }
+}
+
+extension WishViewModal{
+    func saveAction()->OperationResult{
+        guard var wish = wish else { return (success: false, reason: "") }
+        // TODO: add validation
+        if viewMode == .new{
+            return WishesDataStack.shared.insert(wish: &wish)
+        }
+        return WishesDataStack.shared.update(updateWish: wish, withId: wish.id!)
+    }
+    
+    func editAction(){
+        // TODO:
+        // add change VC state based on the edit btn click...
+    }
+    
+    func shareAction(){
+        
+    }
+}
+
+extension WishViewModal: UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView) {
+        wish?.wishBody = textView.text ?? ""
+    }
+}
+
+extension WishViewModal: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        wish?.title = textField.text ?? ""
+        return true
     }
 }

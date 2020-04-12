@@ -132,6 +132,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="editNavButton" destination="egz-PA-3SD" id="soS-T2-Cgj"/>
+                        <outlet property="saveButton" destination="ZM3-gE-3ty" id="Sg0-jj-yC8"/>
+                        <outlet property="shareNavButton" destination="OWN-vL-F0k" id="uEa-ki-upD"/>
                         <outlet property="wishBodyTextView" destination="nIV-yE-rvg" id="8qT-UA-DWo"/>
                         <outlet property="wishTitleTextInput" destination="fSK-1g-Ezi" id="SsQ-FR-5BJ"/>
                     </connections>
