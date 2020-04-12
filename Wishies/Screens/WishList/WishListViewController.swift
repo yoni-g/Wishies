@@ -28,8 +28,8 @@ class WishListViewController: UIViewController {
     
     func displayWishView(with wishId: String){
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let wishVC = storyboard.instantiateViewController(identifier: "WishViewController")
-        
+        let wishVC = storyboard.instantiateViewController(identifier: "WishViewController") as WishViewController
+        wishVC.wishId = wishId
         self.navigationController?.pushViewController(wishVC, animated: true)
     }
     

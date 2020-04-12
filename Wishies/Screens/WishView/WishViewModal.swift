@@ -6,8 +6,36 @@
 //  Copyright © 2020 YGApps. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+enum WishViewMode {
+    case edit
+    case new
+}
 
 class WishViewModal{
     
+    var wish: Wish?
+    var viewMode: WishViewMode!
+    
+    var wishTitle: String? {
+        return wish?.title
+    }
+    
+    var wishBody: String? {
+        return wish?.wishBody
+    }
+    
+    var titlePlaceholder = "Enter wish title.."
+//    var bodyPlaceholder = "So.. What is your wish? 🤔"
+    
+    init(wishId: String?) {
+        if let wishId = wishId{
+            wish = WishesDataStack.shared.getWish(by: wishId)
+            viewMode = .edit
+        } else {
+            viewMode = .new
+        }
+        
+    }
 }
