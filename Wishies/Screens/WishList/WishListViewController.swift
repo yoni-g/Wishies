@@ -9,7 +9,7 @@
 import UIKit
 //import Combine
 
-class WishListViewController: UIViewController {
+class WishListViewController: UIViewController, Storyboarded {
     
     var viewModal: WishListViewModal!
     @IBOutlet var tableView: UITableView!
@@ -36,9 +36,14 @@ class WishListViewController: UIViewController {
     
     func displayWishView(with wishId: String){
 //        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let wishVC = WishViewController.instantiate()
-        wishVC.wishId = wishId
-        self.navigationController?.pushViewController(wishVC, animated: true)
+//        let wishVC = WishViewController.instantiate()
+//        wishVC.wishId = wishId
+//        self.navigationController?.pushViewController(wishVC, animated: true)
+        MainCoordinator.shared.show(view: .wiseView(wishId))
+    }
+    
+    @IBAction func settingBarButtonAction(_ sender: Any) {
+        MainCoordinator.shared.show(view: .settings)
     }
     
 

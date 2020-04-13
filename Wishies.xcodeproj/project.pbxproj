@@ -11,6 +11,8 @@
 		F00F16C524448BB8004D04F5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C424448BB8004D04F5 /* Storyboarded.swift */; };
 		F00F16C82444D41E004D04F5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C72444D41E004D04F5 /* SettingsViewController.swift */; };
 		F00F16CA2444D435004D04F5 /* SettingsViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C92444D435004D04F5 /* SettingsViewModal.swift */; };
+		F00F16CD2444E7CF004D04F5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16CC2444E7CF004D04F5 /* Coordinator.swift */; };
+		F00F16CF2444F183004D04F5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16CE2444F183004D04F5 /* MainCoordinator.swift */; };
 		F061AE17244090DE0035EE1C /* WishListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */; };
 		F0E24EFA2424F23400541BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EF92424F23400541BCE /* AppDelegate.swift */; };
 		F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EFB2424F23400541BCE /* SceneDelegate.swift */; };
@@ -49,6 +51,8 @@
 		F00F16C424448BB8004D04F5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		F00F16C72444D41E004D04F5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F00F16C92444D435004D04F5 /* SettingsViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModal.swift; sourceTree = "<group>"; };
+		F00F16CC2444E7CF004D04F5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F00F16CE2444F183004D04F5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewDataSource.swift; sourceTree = "<group>"; };
 		F0E24EF62424F23400541BCE /* Wishies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wishies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E24EF92424F23400541BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		F00F16CB2444E7B3004D04F5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F00F16CC2444E7CF004D04F5 /* Coordinator.swift */,
+				F00F16CE2444F183004D04F5 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		F0E24EED2424F23400541BCE = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 		F0E24EF82424F23400541BCE /* Wishies */ = {
 			isa = PBXGroup;
 			children = (
+				F00F16CB2444E7B3004D04F5 /* Coordinator */,
 				F00F16C124434C40004D04F5 /* Helpers */,
 				F0F3C449242FE12900028986 /* Modal */,
 				F0F3C442242FD8DE00028986 /* Views */,
@@ -359,12 +373,14 @@
 				F0F3C44F2440831700028986 /* WishesDataStack.swift in Sources */,
 				F0E24EFA2424F23400541BCE /* AppDelegate.swift in Sources */,
 				F061AE17244090DE0035EE1C /* WishListTableViewDataSource.swift in Sources */,
+				F00F16CD2444E7CF004D04F5 /* Coordinator.swift in Sources */,
 				F00F16C324434C59004D04F5 /* ViewUtils.swift in Sources */,
 				F00F16C524448BB8004D04F5 /* Storyboarded.swift in Sources */,
 				F0F3C44D242FE1A800028986 /* Wish.swift in Sources */,
 				F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */,
 				F00F16CA2444D435004D04F5 /* SettingsViewModal.swift in Sources */,
 				F0F3C44B242FE14400028986 /* WishListViewModal.swift in Sources */,
+				F00F16CF2444F183004D04F5 /* MainCoordinator.swift in Sources */,
 				F00F16C82444D41E004D04F5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

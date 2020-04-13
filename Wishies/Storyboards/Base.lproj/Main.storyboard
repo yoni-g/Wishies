@@ -34,7 +34,7 @@
         <!--Wishies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WishListViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WishListViewController" id="BYZ-38-t0r" customClass="WishListViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Wishies" id="s48-CC-JjI">
-                        <barButtonItem key="leftBarButtonItem" image="gear" catalog="system" id="cfL-aV-xV1"/>
+                        <barButtonItem key="leftBarButtonItem" image="gear" catalog="system" id="cfL-aV-xV1">
+                            <connections>
+                                <action selector="settingBarButtonAction:" destination="BYZ-38-t0r" id="Kzs-qJ-Ogs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ond-2u-dfQ">
                             <connections>
                                 <segue destination="DAb-Pb-maY" kind="show" id="E6e-NN-kt8"/>

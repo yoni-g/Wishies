@@ -15,15 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // add some initial data
-        var wish1 = Wish(title: "first wish", body: "become rich!!")
-        var wish2 = Wish(title: "2nd wish", body: "become famous!!")
-        var wish3 = Wish(title: "3rd wish", body: "become a god!!")
-        _ = WishesDataStack.shared.insert(wish: &wish1)
-        _ = WishesDataStack.shared.insert(wish: &wish2)
-        _ = WishesDataStack.shared.insert(wish: &wish3)
-        
         return true
     }
 
