@@ -16,7 +16,7 @@ class WishViewController: UIViewController, Storyboarded {
     @IBOutlet weak var wishTitleTextInput: UITextField!
     @IBOutlet weak var wishBodyTextView: UITextView!
     @IBOutlet weak var editNavButton: UIBarButtonItem!
-    @IBOutlet weak var shareNavButton: UIBarButtonItem!
+    @IBOutlet weak var deleteNavButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
@@ -36,15 +36,18 @@ class WishViewController: UIViewController, Storyboarded {
         wishBodyTextView.delegate = viewModal
         // button views
         editNavButton.isEnabled = viewModal.viewMode == .edit
-        shareNavButton.isEnabled = viewModal.viewMode == .edit
+        deleteNavButton.isEnabled = viewModal.viewMode == .edit
     }
     
     @IBAction func editNavBarAction(_ sender: Any) {
         viewModal.editAction()
     }
     
-    @IBAction func shareNavBarAction(_ sender: Any) {
-        viewModal.shareAction()
+    @IBAction func deleteNavBarAction(_ sender: Any) {
+        let result = viewModal.deleteAction()
+        if result.success {
+            MainCoordinator.shared.back()
+        }
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {

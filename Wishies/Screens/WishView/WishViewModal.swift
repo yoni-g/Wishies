@@ -60,8 +60,12 @@ extension WishViewModal{
         // add change VC state based on the edit btn click...
     }
     
-    func shareAction(){
-        
+    func deleteAction()->OperationResult{
+        guard let wish = wish else { return (success: false, reason: "") }
+        if viewMode == .edit{
+            return WishesDataStack.shared.removeWish(by: wish.id!)
+        }
+        return (success: false, reason: "")
     }
 }
 

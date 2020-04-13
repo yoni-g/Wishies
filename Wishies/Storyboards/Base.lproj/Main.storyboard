@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1nC-pq-HNO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFR-11-hRd">
-                                <rect key="frame" x="32" y="69" width="64" height="21"/>
+                                <rect key="frame" x="32" y="105" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -26,6 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pke-8h-n9x"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jff-NK-mqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,6 +35,7 @@
         <!--Wishies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="WishListViewController" id="BYZ-38-t0r" customClass="WishListViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -79,7 +81,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Wishies" id="s48-CC-JjI">
+                    <navigationItem key="navigationItem" title="Wishies" largeTitleDisplayMode="always" id="s48-CC-JjI">
                         <barButtonItem key="leftBarButtonItem" image="gear" catalog="system" id="cfL-aV-xV1">
                             <connections>
                                 <action selector="settingBarButtonAction:" destination="BYZ-38-t0r" id="Bkb-TI-ezl"/>
@@ -91,24 +93,24 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="ePI-Xp-xWr" id="OsY-Oq-UIK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="971.01449275362324" y="137.94642857142856"/>
         </scene>
         <!--Wish View Controller-->
         <scene sceneID="JUl-6D-3GZ">
             <objects>
-                <viewController storyboardIdentifier="WishViewController" id="DAb-Pb-maY" customClass="WishViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WishViewController" interfaceStyle="light" id="DAb-Pb-maY" customClass="WishViewController" customModule="Wishies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sIP-Zs-xgo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSK-1g-Ezi">
-                                <rect key="frame" x="20" y="57" width="360" height="32"/>
+                                <rect key="frame" x="20" y="101" width="360" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Iso-sb-Wr8"/>
                                 </constraints>
@@ -116,7 +118,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nIV-yE-rvg">
-                                <rect key="frame" x="20" y="97" width="374" height="626"/>
+                                <rect key="frame" x="20" y="141" width="374" height="582"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -153,17 +155,18 @@
                                     <action selector="editNavBarAction:" destination="DAb-Pb-maY" id="l4r-81-iX7"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="action" id="OWN-vL-F0k">
+                            <barButtonItem systemItem="trash" id="OWN-vL-F0k">
                                 <connections>
-                                    <action selector="shareNavBarAction:" destination="DAb-Pb-maY" id="MBp-3o-3vr"/>
+                                    <action selector="deleteNavBarAction:" destination="DAb-Pb-maY" id="qNQ-LU-WhU"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="deleteNavButton" destination="OWN-vL-F0k" id="A4h-2k-e4k"/>
                         <outlet property="editNavButton" destination="egz-PA-3SD" id="soS-T2-Cgj"/>
                         <outlet property="saveButton" destination="ZM3-gE-3ty" id="Sg0-jj-yC8"/>
-                        <outlet property="shareNavButton" destination="OWN-vL-F0k" id="uEa-ki-upD"/>
                         <outlet property="wishBodyTextView" destination="nIV-yE-rvg" id="8qT-UA-DWo"/>
                         <outlet property="wishTitleTextInput" destination="fSK-1g-Ezi" id="SsQ-FR-5BJ"/>
                     </connections>
@@ -171,24 +174,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rI-ba-Yq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800" y="408"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="y7D-BN-9KP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1nC-pq-HNO" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FmR-Tm-GLO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eGq-uD-WVf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ei-gs-26w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
