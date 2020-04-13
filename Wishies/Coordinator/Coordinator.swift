@@ -24,5 +24,6 @@ protocol Coordinator {
     func start()
     // display funcs
     func show(view: AppView)
-    func showHomwView(animated: Bool)
+    func showHomeView(animated: Bool)
+    func back()
 }

@@ -42,9 +42,6 @@ class WishesDataStack {
         wish.id = id
         wish.createdDate = Date()
         // TODO: check if alreadty exists or some other valdations
-//        if wishes. {
-//
-//        }
         wishes.append(wish)
         return (true, nil)
     }

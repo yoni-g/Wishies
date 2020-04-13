@@ -20,6 +20,12 @@ class WishViewController: UIViewController, Storyboarded {
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
+        setupViewModal()
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    func setupViewModal(){
         // init view modal
         viewModal = WishViewModal(wishId: wishId)
         // text fields
@@ -31,9 +37,6 @@ class WishViewController: UIViewController, Storyboarded {
         // button views
         editNavButton.isEnabled = viewModal.viewMode == .edit
         shareNavButton.isEnabled = viewModal.viewMode == .edit
-        super.viewDidLoad()
-//        wishBodyTextView.tex = viewModal.bodyPlaceholder
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func editNavBarAction(_ sender: Any) {
@@ -49,7 +52,7 @@ class WishViewController: UIViewController, Storyboarded {
         if viewModal.isWishFieldValid {
             let result = viewModal.saveAction()
             if result.success {
-                self.navigationController?.popViewController(animated: true)
+                MainCoordinator.shared.back()
             }
         }
         // TODO: add validation errors.. and a faild save handler ..

@@ -16,7 +16,7 @@ class MainCoordinator: Coordinator{
     private init() {}
     
     func start(){
-        showHomwView(animated: false)
+        showHomeView(animated: false)
     }
     // set the nav bar
     func setNavControler(_ navCtrl: UINavigationController)->Self{
@@ -27,7 +27,7 @@ class MainCoordinator: Coordinator{
     func show(view: AppView){
         switch view {
             case .wishList:
-                showHomwView(animated: true)
+                showHomeView(animated: true)
             case .wishView(let wishId):
                 let vc = WishViewController.instantiate()
                 vc.wishId = wishId
@@ -40,9 +40,13 @@ class MainCoordinator: Coordinator{
         }
     }
     
-    internal func showHomwView(animated: Bool){
+    internal func showHomeView(animated: Bool){
         let vc = WishListViewController.instantiate()
         navigationController?.pushViewController(vc, animated: animated)
+    }
+    
+    func back(){
+        navigationController?.popViewController(animated: true)
     }
     
 }
