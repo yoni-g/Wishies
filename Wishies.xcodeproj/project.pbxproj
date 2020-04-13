@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F00F16C324434C59004D04F5 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C224434C59004D04F5 /* ViewUtils.swift */; };
 		F00F16C524448BB8004D04F5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C424448BB8004D04F5 /* Storyboarded.swift */; };
+		F00F16C82444D41E004D04F5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C72444D41E004D04F5 /* SettingsViewController.swift */; };
+		F00F16CA2444D435004D04F5 /* SettingsViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C92444D435004D04F5 /* SettingsViewModal.swift */; };
 		F061AE17244090DE0035EE1C /* WishListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */; };
 		F0E24EFA2424F23400541BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EF92424F23400541BCE /* AppDelegate.swift */; };
 		F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EFB2424F23400541BCE /* SceneDelegate.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		F00F16C224434C59004D04F5 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		F00F16C424448BB8004D04F5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		F00F16C72444D41E004D04F5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F00F16C92444D435004D04F5 /* SettingsViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModal.swift; sourceTree = "<group>"; };
 		F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewDataSource.swift; sourceTree = "<group>"; };
 		F0E24EF62424F23400541BCE /* Wishies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wishies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E24EF92424F23400541BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 				F00F16C424448BB8004D04F5 /* Storyboarded.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F00F16C62444D3D7004D04F5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F00F16C72444D41E004D04F5 /* SettingsViewController.swift */,
+				F00F16C92444D435004D04F5 /* SettingsViewModal.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		F0E24EED2424F23400541BCE = {
@@ -167,6 +180,7 @@
 		F0F3C441242FD1D900028986 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F00F16C62444D3D7004D04F5 /* Settings */,
 				F0F3C446242FE0B000028986 /* WishView */,
 				F0F3C445242FE09800028986 /* WishList */,
 			);
@@ -349,7 +363,9 @@
 				F00F16C524448BB8004D04F5 /* Storyboarded.swift in Sources */,
 				F0F3C44D242FE1A800028986 /* Wish.swift in Sources */,
 				F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */,
+				F00F16CA2444D435004D04F5 /* SettingsViewModal.swift in Sources */,
 				F0F3C44B242FE14400028986 /* WishListViewModal.swift in Sources */,
+				F00F16C82444D41E004D04F5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
