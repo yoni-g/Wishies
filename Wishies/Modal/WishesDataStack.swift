@@ -50,9 +50,8 @@ class WishesDataStack {
     }
     
     func update(updateWish: Wish, withId id: String)->OperationResult{
-        if var wish = getWish(by: id){
-            wish.title = updateWish.title
-            wish.wishBody = updateWish.wishBody
+        if let index = wishes.firstIndex(where: { $0.id == id }){
+            wishes[index] = updateWish
             return (true, nil)
         }
         return (false, "Wish with id: \(id) not found!")
@@ -61,6 +60,5 @@ class WishesDataStack {
     private func generateId()->String{
         return String(Date.timeIntervalSinceReferenceDate * 100000)
     }
-//    func
     
 }

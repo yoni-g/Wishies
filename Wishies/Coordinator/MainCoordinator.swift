@@ -28,7 +28,7 @@ class MainCoordinator: Coordinator{
         switch view {
             case .wishList:
                 showHomwView(animated: true)
-            case .wiseView(let wishId):
+            case .wishView(let wishId):
                 let vc = WishViewController.instantiate()
                 vc.wishId = wishId
                 navigationController?.pushViewController(vc, animated: true)
@@ -44,21 +44,5 @@ class MainCoordinator: Coordinator{
         let vc = WishListViewController.instantiate()
         navigationController?.pushViewController(vc, animated: animated)
     }
-    
-//    func showWishList(){
-//
-//    }
-//
-//    func showWishView(_ wishId: String){
-//
-//    }
-//
-//    func showSettings(){
-//
-//    }
-//
-//    func showLogin(){
-//
-//    }
     
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Combine
 
 class WishListViewController: UIViewController, Storyboarded {
     
@@ -35,7 +34,7 @@ class WishListViewController: UIViewController, Storyboarded {
     }
     
     func displayWishView(with wishId: String){
-        MainCoordinator.shared.show(view: .wiseView(wishId))
+        MainCoordinator.shared.show(view: .wishView(wishId))
     }
     
     @IBAction func settingBarButtonAction(_ sender: Any) {
@@ -43,7 +42,7 @@ class WishListViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func createBarButtonAction(_ sender: Any) {
-        MainCoordinator.shared.show(view: .wiseView(nil))
+        MainCoordinator.shared.show(view: .wishView(nil))
     }
     
 

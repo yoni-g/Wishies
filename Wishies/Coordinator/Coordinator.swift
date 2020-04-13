@@ -8,10 +8,11 @@
 
 import UIKit
 
+// apps' views -> we can also split into separate enums for each child coordinator
 enum AppView {
     case settings
     case wishList
-    case wiseView(_ wishId: String?)
+    case wishView(_ wishId: String?)
     case login
 }
 
