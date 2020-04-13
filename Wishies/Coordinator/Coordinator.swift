@@ -11,7 +11,7 @@ import UIKit
 enum AppView {
     case settings
     case wishList
-    case wiseView(_ wishId: String)
+    case wiseView(_ wishId: String?)
     case login
 }
 

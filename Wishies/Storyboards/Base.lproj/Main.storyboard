@@ -29,7 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jff-NK-mqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="-577"/>
+            <point key="canvasLocation" x="1800" y="-336"/>
         </scene>
         <!--Wishies-->
         <scene sceneID="tne-QT-ifu">
@@ -82,12 +82,12 @@
                     <navigationItem key="navigationItem" title="Wishies" id="s48-CC-JjI">
                         <barButtonItem key="leftBarButtonItem" image="gear" catalog="system" id="cfL-aV-xV1">
                             <connections>
-                                <action selector="settingBarButtonAction:" destination="BYZ-38-t0r" id="Kzs-qJ-Ogs"/>
+                                <action selector="settingBarButtonAction:" destination="BYZ-38-t0r" id="Bkb-TI-ezl"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="ond-2u-dfQ">
                             <connections>
-                                <segue destination="DAb-Pb-maY" kind="show" id="E6e-NN-kt8"/>
+                                <action selector="createBarButtonAction:" destination="BYZ-38-t0r" id="PDq-LB-oRx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fSK-1g-Ezi">
-                                <rect key="frame" x="20" y="101" width="360" height="32"/>
+                                <rect key="frame" x="20" y="57" width="360" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Iso-sb-Wr8"/>
                                 </constraints>
@@ -116,7 +116,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nIV-yE-rvg">
-                                <rect key="frame" x="20" y="141" width="374" height="582"/>
+                                <rect key="frame" x="20" y="97" width="374" height="626"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rI-ba-Yq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1784.057971014493" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1800" y="408"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y7D-BN-9KP">

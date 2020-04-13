@@ -32,6 +32,9 @@ class MainCoordinator: Coordinator{
                 let vc = WishViewController.instantiate()
                 vc.wishId = wishId
                 navigationController?.pushViewController(vc, animated: true)
+            case .settings:
+                let vc = SettingsViewController.instantiate()
+                navigationController?.pushViewController(vc, animated: true)
             default:
                 break
         }

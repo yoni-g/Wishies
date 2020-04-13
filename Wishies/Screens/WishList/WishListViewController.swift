@@ -35,15 +35,15 @@ class WishListViewController: UIViewController, Storyboarded {
     }
     
     func displayWishView(with wishId: String){
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        let wishVC = WishViewController.instantiate()
-//        wishVC.wishId = wishId
-//        self.navigationController?.pushViewController(wishVC, animated: true)
         MainCoordinator.shared.show(view: .wiseView(wishId))
     }
     
     @IBAction func settingBarButtonAction(_ sender: Any) {
         MainCoordinator.shared.show(view: .settings)
+    }
+    
+    @IBAction func createBarButtonAction(_ sender: Any) {
+        MainCoordinator.shared.show(view: .wiseView(nil))
     }
     
 
