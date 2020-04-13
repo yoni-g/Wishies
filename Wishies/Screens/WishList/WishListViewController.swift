@@ -14,12 +14,7 @@ class WishListViewController: UIViewController, Storyboarded {
     @IBOutlet var tableView: UITableView!
     var tableViewDelegate: WishListTableView!
     
-    override func viewDidLoad() {
-        initViewCtrl()
-        super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         initViewCtrl()
         super.viewDidAppear(animated)
     }
