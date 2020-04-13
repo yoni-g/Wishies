@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F00F16C324434C59004D04F5 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C224434C59004D04F5 /* ViewUtils.swift */; };
+		F00F16C524448BB8004D04F5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F16C424448BB8004D04F5 /* Storyboarded.swift */; };
 		F061AE17244090DE0035EE1C /* WishListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */; };
 		F0E24EFA2424F23400541BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EF92424F23400541BCE /* AppDelegate.swift */; };
 		F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E24EFB2424F23400541BCE /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		F00F16C224434C59004D04F5 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		F00F16C424448BB8004D04F5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		F061AE16244090DD0035EE1C /* WishListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewDataSource.swift; sourceTree = "<group>"; };
 		F0E24EF62424F23400541BCE /* Wishies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wishies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E24EF92424F23400541BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F00F16C224434C59004D04F5 /* ViewUtils.swift */,
+				F00F16C424448BB8004D04F5 /* Storyboarded.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				F0E24EFA2424F23400541BCE /* AppDelegate.swift in Sources */,
 				F061AE17244090DE0035EE1C /* WishListTableViewDataSource.swift in Sources */,
 				F00F16C324434C59004D04F5 /* ViewUtils.swift in Sources */,
+				F00F16C524448BB8004D04F5 /* Storyboarded.swift in Sources */,
 				F0F3C44D242FE1A800028986 /* Wish.swift in Sources */,
 				F0E24EFC2424F23400541BCE /* SceneDelegate.swift in Sources */,
 				F0F3C44B242FE14400028986 /* WishListViewModal.swift in Sources */,

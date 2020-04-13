@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Combine
 
 class WishListViewController: UIViewController {
     
@@ -34,8 +35,8 @@ class WishListViewController: UIViewController {
     }
     
     func displayWishView(with wishId: String){
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let wishVC = storyboard.instantiateViewController(identifier: "WishViewController") as WishViewController
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let wishVC = WishViewController.instantiate()
         wishVC.wishId = wishId
         self.navigationController?.pushViewController(wishVC, animated: true)
     }

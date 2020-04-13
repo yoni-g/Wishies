@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WishViewController: UIViewController {
+class WishViewController: UIViewController, Storyboarded {
     
     var wishId: String!
     var viewModal: WishViewModal!
