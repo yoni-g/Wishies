@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 enum WishViewMode {
     case edit
@@ -16,7 +17,7 @@ enum WishViewMode {
 class WishViewModal: NSObject{
     
     var wish: Wish?
-    var viewMode: WishViewMode!
+    @Published var viewMode: WishViewMode!
     
     var wishTitle: String? {
         return wish?.title
