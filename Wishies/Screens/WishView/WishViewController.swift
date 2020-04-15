@@ -13,7 +13,7 @@ class WishViewController: UIViewController, Storyboarded {
     
     var wishId: String!
     var viewModal: WishViewModal!
-    private var switchSubscriber: AnyCancellable?
+    private var viewSubscriber: AnyCancellable?
     
     @IBOutlet weak var wishTitleTextInput: UITextField!
     @IBOutlet weak var wishBodyTextView: UITextView!
@@ -37,15 +37,10 @@ class WishViewController: UIViewController, Storyboarded {
         wishBodyTextView.text = viewModal.wishBody
         wishBodyTextView.delegate = viewModal
         // button views
-        switchSubscriber = viewModal.$viewMode.receive(on: DispatchQueue.main)
-            .map( { $0 == .edit })
-            .assign(to: \.isEnabled, on: editNavButton)
-        
-//        switchSubscriber = viewModal.$viewMode.receive(on: DispatchQueue.main)
-//            .map( { $0 == .edit })
-//            .assign(to: \.isEnabled, on: deleteNavButton)
-//        editNavButton.isEnabled = viewModal.viewMode == .edit
-//        deleteNavButton.isEnabled = viewModal.viewMode == .edit
+        viewSubscriber = viewModal.$viewMode.sink { [weak self] in
+            self?.editNavButton.isEnabled = $0 == .edit
+            self?.deleteNavButton.isEnabled = $0 == .edit
+        }
     }
     
     @IBAction func editNavBarAction(_ sender: Any) {
@@ -60,7 +55,6 @@ class WishViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
-
         if viewModal.isWishFieldValid {
             let result = viewModal.saveAction()
             if result.success {
@@ -68,8 +62,8 @@ class WishViewController: UIViewController, Storyboarded {
             }
         }
         // TODO: add validation errors.. and a faild save handler ..
+//        viewModal.viewMode = (viewModal.viewMode == .edit) ? .new : .edit
         
-        //        viewModal.viewMode = (viewModal.viewMode == .edit) ? .new : .edit
         
     }
 
