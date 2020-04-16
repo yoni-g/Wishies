@@ -38,8 +38,8 @@ class WishesDataStack {
     }
     
     func insert(wish: inout Wish)->OperationResult{
-        let id = generateId()
-        wish.id = id
+        let id = UUID()
+        wish.id = String(describing: id)
         wish.createdDate = Date()
         // TODO: check if alreadty exists or some other valdations
         wishes.append(wish)
@@ -52,10 +52,6 @@ class WishesDataStack {
             return (true, nil)
         }
         return (false, "Wish with id: \(id) not found!")
-    }
-    
-    private func generateId()->String{
-        return String(Date.timeIntervalSinceReferenceDate * 100000)
     }
     
 }
