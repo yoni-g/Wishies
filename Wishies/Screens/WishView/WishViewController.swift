@@ -36,7 +36,10 @@ class WishViewController: UIViewController, Storyboarded {
         wishTitleTextInput.delegate = viewModal
         wishBodyTextView.text = viewModal.wishBody
         wishBodyTextView.delegate = viewModal
-        // button views
+        // set done button to remove keyboard
+        wishTitleTextInput.setDoneButtonToolbarView(self, #selector(doneButtonAction))
+        wishBodyTextView.setDoneButtonToolbarView(self, #selector(doneButtonAction))
+        // button views mode config 
         viewSubscriber = viewModal.$viewMode.sink { [weak self] in
             self?.editNavButton.isEnabled = $0 == .edit
             self?.deleteNavButton.isEnabled = $0 == .edit
@@ -66,5 +69,8 @@ class WishViewController: UIViewController, Storyboarded {
         
         
     }
-
+    
+    @objc func doneButtonAction(){
+        self.view.endEditing(true)
+    }
 }
