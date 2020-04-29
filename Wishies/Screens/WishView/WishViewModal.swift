@@ -14,17 +14,27 @@ enum WishViewMode {
     case new
 }
 
-class WishViewModal: NSObject{
+class WishViewModal{
     
     var wish: Wish?
     @Published var viewMode: WishViewMode!
     
     var wishTitle: String? {
-        return wish?.title
+        get {
+            return wish?.title
+        }
+        set {
+            wish?.title = newValue
+        }
     }
     
     var wishBody: String? {
-        return wish?.wishBody
+        get {
+            return wish?.wishBody
+        }
+        set {
+            wish?.wishBody = newValue
+        }
     }
     
     var isWishFieldValid: Bool {
@@ -35,8 +45,8 @@ class WishViewModal: NSObject{
 //    var bodyPlaceholder = "So.. What is your wish? 🤔"
     
     init(wishId: String?) {
-        if let wishId = wishId{
-            wish = WishesDataStack.shared.getWish(by: wishId)
+        if let wishId = wishId, let wish = WishesDataStack.shared.getWish(by: wishId){
+            self.wish = wish
             viewMode = .edit
         } else {
             viewMode = .new
@@ -67,18 +77,5 @@ extension WishViewModal{
             return WishesDataStack.shared.removeWish(by: wish.id!)
         }
         return (success: false, reason: "")
-    }
-}
-
-extension WishViewModal: UITextViewDelegate{
-    func textViewDidChange(_ textView: UITextView) {
-        wish?.wishBody = textView.text ?? ""
-    }
-}
-
-extension WishViewModal: UITextFieldDelegate{
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        wish?.title = textField.text ?? ""
-        return true
     }
 }

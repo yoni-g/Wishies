@@ -33,9 +33,10 @@ class WishViewController: UIViewController, Storyboarded {
         // text fields
         wishTitleTextInput.text = viewModal.wishTitle
         wishTitleTextInput.placeholder = viewModal.titlePlaceholder
-        wishTitleTextInput.delegate = viewModal
         wishBodyTextView.text = viewModal.wishBody
-        wishBodyTextView.delegate = viewModal
+        
+        wishBodyTextView.delegate = self
+        wishTitleTextInput.delegate = self
         // set done button to remove keyboard
         wishTitleTextInput.setDoneButtonToolbarView(self, #selector(doneButtonAction))
         wishBodyTextView.setDoneButtonToolbarView(self, #selector(doneButtonAction))
@@ -72,5 +73,19 @@ class WishViewController: UIViewController, Storyboarded {
     
     @objc func doneButtonAction(){
         self.view.endEditing(true)
+    }
+}
+
+
+extension WishViewController: UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView) {
+        viewModal.wishBody = textView.text ?? ""
+    }
+}
+
+extension WishViewController: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        viewModal.wishTitle = textField.text ?? ""
+        return true
     }
 }
