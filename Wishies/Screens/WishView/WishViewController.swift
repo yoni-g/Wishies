@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Combine
+//import Combine
 
 class WishViewController: UIViewController, Storyboarded {
     
     var wishId: String!
     var viewModal: WishViewModal!
-    private var viewSubscriber: AnyCancellable?
+//    private var viewSubscriber: AnyCancellable?
     
     @IBOutlet weak var wishTitleTextInput: UITextField!
     @IBOutlet weak var wishBodyTextView: UITextView!
@@ -38,10 +38,14 @@ class WishViewController: UIViewController, Storyboarded {
         wishBodyTextView.delegate = self
         wishTitleTextInput.delegate = self
         // set done button to remove keyboard
-        wishTitleTextInput.setDoneButtonToolbarView(self, #selector(doneButtonAction))
-        wishBodyTextView.setDoneButtonToolbarView(self, #selector(doneButtonAction))
+        wishTitleTextInput.setDoneButtonToolbarView(self,
+            #selector(doneButtonAction)
+        )
+        wishBodyTextView.setDoneButtonToolbarView(self,
+            #selector(doneButtonAction)
+        )
         // button views mode config 
-        viewSubscriber = viewModal.$viewMode.sink { [weak self] in
+        _ = viewModal.$viewMode.sink { [weak self] in
             self?.editNavButton.isEnabled = $0 == .edit
             self?.deleteNavButton.isEnabled = $0 == .edit
         }
